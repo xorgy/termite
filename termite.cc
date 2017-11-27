@@ -43,6 +43,10 @@
 #include "util/maybe.hh"
 #include "util/memory.hh"
 
+#if (defined(__unix__) || defined(unix))
+#include <sys/wait.h>
+#endif
+
 using namespace std::placeholders;
 
 /* Allow scales a bit smaller and a bit larger than the usual pango ranges */
